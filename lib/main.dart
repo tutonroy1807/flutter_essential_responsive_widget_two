@@ -78,12 +78,31 @@ class Mypage extends StatelessWidget {
 
 
       ),
-
+      /*
       body: Center(
       child: //Text("Lamborgini Cars"),
         Image.network("https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/facelift_2019/model_detail/few_off/sian-fkp-37/2022/06_20/gallery/sian_05_m.jpg"),
       ),
+       */
 
+      body: Container(
+
+
+        height: 200,
+        width: 300,
+        margin: EdgeInsets.fromLTRB(150, 50, 100, 100),
+        padding: EdgeInsets.all(30),
+        decoration: BoxDecoration(
+          color: Colors.amber,
+          border: Border.all(
+              color: Colors.black,
+              width: 6.0,
+              style: BorderStyle.solid
+          ),
+          borderRadius: BorderRadius.circular(20)
+        ),
+        child: Image.network("https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/facelift_2019/model_detail/few_off/sian-fkp-37/2022/06_20/gallery/sian_05_m.jpg"),
+      ),
 
     );
   }
