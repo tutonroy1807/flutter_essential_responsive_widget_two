@@ -28,9 +28,35 @@ class Mypage extends StatelessWidget {
     );
   }
 
+  MyAlartDiaglog(context){
+    return showDialog(
+        context: context,
+        builder: (BuildContext context){
+            return Expanded(
+                child: AlertDialog(
+                  title: Text("Alert!!"),
+                  content: Text("Do You want delete?"),
+                  actions: [
+                    TextButton(onPressed: (){
+                      MySnackBar("YES, This message is deleted", context);
+                      Navigator.of(context).pop();
+                    }, child: Text("Yes")),
+                    TextButton(onPressed: (){Navigator.of(context).pop();}, child: Text("No")),
+                  ],
+                )
+            );
+    }
+    );
+  }
+
 
   @override
   Widget build(BuildContext context) {
+
+
+    /*
+
+     *> Button Style Property
 
     ButtonStyle buttonStyle = ElevatedButton.styleFrom(
 
@@ -43,6 +69,8 @@ class Mypage extends StatelessWidget {
 
 
     );
+
+    */
 
     return Scaffold(
       appBar: AppBar(
@@ -62,6 +90,10 @@ class Mypage extends StatelessWidget {
         ],
       ),
 
+      /*
+
+      *> Button
+
       body: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
@@ -70,6 +102,12 @@ class Mypage extends StatelessWidget {
           OutlinedButton(onPressed: (){MySnackBar("Its a Outlinedbutton", context);}, child: Text("OUTLINED BUTTON"), style: buttonStyle,)
         ],
 
+      ),
+
+      */
+
+      body: Center(
+        child: OutlinedButton(child: Text("Click Me"),onPressed: (){MyAlartDiaglog(context);},),
       ),
 
 
