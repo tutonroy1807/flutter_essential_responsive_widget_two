@@ -31,6 +31,19 @@ class Mypage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    ButtonStyle buttonStyle = ElevatedButton.styleFrom(
+
+      padding: EdgeInsets.all(15),
+      backgroundColor: Colors.deepPurpleAccent,
+      foregroundColor: Colors.black,
+      shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.all(Radius.circular(40)),
+      )
+
+
+    );
+
     return Scaffold(
       appBar: AppBar(
         title: Text("Haiyer_Apps->"),
@@ -48,6 +61,19 @@ class Mypage extends StatelessWidget {
           }, icon: Icon(Icons.add_call),),
         ],
       ),
+
+      body: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          TextButton(onPressed: (){MySnackBar("Its a Textbutton", context);}, child: Text("TEXT BUTTON"), style: buttonStyle,),
+          ElevatedButton(onPressed: (){MySnackBar("Its a Elevatedbutton", context);}, child: Text("ELEVATED BUTTON"), style: buttonStyle,),
+          OutlinedButton(onPressed: (){MySnackBar("Its a Outlinedbutton", context);}, child: Text("OUTLINED BUTTON"), style: buttonStyle,)
+        ],
+
+      ),
+
+
+
       floatingActionButton: FloatingActionButton(
         elevation: 30,
 
@@ -104,10 +130,10 @@ class Mypage extends StatelessWidget {
         ),
         child: Image.network("https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/facelift_2019/model_detail/few_off/sian-fkp-37/2022/06_20/gallery/sian_05_m.jpg"),
       ),
-      */
 
 
-       */
+
+
       
       
       // Row Container works in this Section .. 
@@ -169,7 +195,9 @@ class Mypage extends StatelessWidget {
       ),
       
       
-      
+      */
+
+       */
       
       
       
