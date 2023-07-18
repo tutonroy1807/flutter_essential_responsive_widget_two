@@ -78,16 +78,17 @@ class Mypage extends StatelessWidget {
 
 
       ),
+      
       /*
       body: Center(
       child: //Text("Lamborgini Cars"),
         Image.network("https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/facelift_2019/model_detail/few_off/sian-fkp-37/2022/06_20/gallery/sian_05_m.jpg"),
       ),
-       */
-
+       
+   /*> Works with body Part and include a picture in box section
+    
       body: Container(
-
-
+        
         height: 200,
         width: 300,
         margin: EdgeInsets.fromLTRB(150, 50, 100, 100),
@@ -103,7 +104,75 @@ class Mypage extends StatelessWidget {
         ),
         child: Image.network("https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/facelift_2019/model_detail/few_off/sian-fkp-37/2022/06_20/gallery/sian_05_m.jpg"),
       ),
+      */
 
+
+       */
+      
+      
+      // Row Container works in this Section .. 
+      
+      body: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: [
+          Container(
+
+            height: 100,
+            width: 100,
+              margin: EdgeInsets.all(10),
+              padding: EdgeInsets.all(10),
+              decoration: BoxDecoration(
+                color: Colors.amber,
+                border: Border.all(
+                  width: 5,
+                  color: Colors.redAccent,
+                ),
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: Image.network("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaxTXrwam02kzKKNDabGkCkRRdYs_siK4XHQ&usqp=CAU"),
+          ),
+          Container(
+              height: 100,
+              width: 100,
+            margin: EdgeInsets.all(10),
+            padding: EdgeInsets.all(10),
+            decoration: BoxDecoration(
+                color: Colors.amber,
+                border: Border.all(
+                  width: 5,
+                  color: Colors.redAccent,
+                ),
+                borderRadius: BorderRadius.circular(10),
+
+          ),
+            child: Image.network("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaxTXrwam02kzKKNDabGkCkRRdYs_siK4XHQ&usqp=CAU"),
+          ),
+
+          Container(
+
+              height: 100,
+              width: 100,
+                  margin: EdgeInsets.all(10),
+                 padding: EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                    color: Colors.amber,
+                    border: Border.all(
+                       width: 5,
+                        color: Colors.redAccent,
+                    ),
+                 borderRadius: BorderRadius.circular(10),
+
+          ),
+            child: Image.network("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaxTXrwam02kzKKNDabGkCkRRdYs_siK4XHQ&usqp=CAU"),
+          ),
+        ],
+      ),
+      
+      
+      
+      
+      
+      
     );
   }
 }
